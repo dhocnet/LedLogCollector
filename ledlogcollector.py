@@ -11,8 +11,7 @@
 # Kontak: mongkee.lutfi@gmail.com
 #
 
-import os
-import codecs
+import os, codecs, base64
 
 # variable OS 32 dan 64-bit
 llc_32 = "c:\\Program Files\\LED soft\\LED Manager 2012\\LogFile"
