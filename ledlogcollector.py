@@ -510,12 +510,14 @@ def llc_kerja(llc_ar):
                 llc_a = codecs.open("%s\\%s\\%s"%(llc_ar,llc_pil,llc_ffx),"r",encoding="utf-16")
                 llc_b = llc_a.readlines()
                 llc_a.close()
+                llc_h = llc_ffx.split("-")
+                llc_a = codecs.open("xl\\sharedStrings.xml","w",encoding="utf-16")
+                llc_a.write("%s%s%s"%(base64.decodestring(llc_xml1),llc_bulan[llc_h[0]],base64.decodestring(llc_xml2)))
                 for llc_c in llc_b:
                     if llc_c.find("Duration") != -1:
                         llc_e = llc_c.split("=")
                         llc_f = llc_e[0][:8]
                         llc_g = llc_e[1][:-7]
-                        llc_h = llc_ffx.split("-")
                         llc_i = llc_c.split(" ")
                         llc_j = ""
                         llc_k = ""
@@ -524,8 +526,6 @@ def llc_kerja(llc_ar):
                                 llc_j = llc_l[8:]
                             elif llc_l.find("CurPos") != -1:
                                 llc_k = llc_l[6:]
-                        llc_a = codecs.open("xl\\sharedStrings.xml","w",encoding="utf-16")
-                        llc_a.write("%s%s%s"%(base64.decodestring(llc_xml1),llc_bulan[llc_h[0]],base64.decodestring(llc_xml2))
                         llc_a.write("""<si><t xml:space=\"preserve\">%s %s %s %s</t></si>
                                     <si><t xml:space=\"preserve\">%s</t></si>
                                     <si><t xml:space=\"preserve\">%s</t></si>
