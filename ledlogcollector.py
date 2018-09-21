@@ -1,5 +1,4 @@
-#!
-# -*- coding: utf-8 -*-
+#
 # Led Log Collector
 # Versi: 0.0.1-rc1
 # 
@@ -38,7 +37,7 @@ llc_xml2 = """</t></si><si><t xml:space="preserve">Auto generate log by LedLogCo
 # SELESAI EXCEL (XLSX) DIR STRUCTURE DAN FILE TEMPLATE
 
 def llc_kerja(llc_ar):
-    if os.path.exists("cache"):
+    if os.path.exsists("cache"):
         shutil.rmtree("cache")
     os.mkdir("cache")
     os.chdir("cache")
