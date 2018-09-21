@@ -19,7 +19,7 @@ llc_32 = "c:\\Program Files\\LED soft\\LED Manager 2012\\LogFile"
 llc_64 = "c:\\Program Files (x86)\\LED soft\\LED Manager 2012\\LogFile"
 llc_out = "c:\\LedLog Collector"
 llc_bulan = {"1":"January","2":"February","3":"March","4":"April","5":"Mey","6":"June",
-             "7":"July","8":"August","9":"September","10":"October","11":"November","12":"Desember"}
+             "7":"July","8":"August","9":"September","10":"October","11":"November","12":"December"}
 # MULAI EXCEL (XLSX) DIR STRUCTURE DAN FILE TEMPLATE
 llc_dir = ["docProps","_rels","xl","xl\\_rels","xl\\worksheets","xl\\worksheets\\_rels"]
 llc_xmlf = ["[Content_Types].xml","docProps\\app.xml","docProps\\core.xml","xl\\styles.xml","xl\\workbook.xml",
