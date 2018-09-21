@@ -38,7 +38,7 @@ llc_xml2 = """</t></si><si><t xml:space="preserve">Auto generate log by LedLogCo
 # SELESAI EXCEL (XLSX) DIR STRUCTURE DAN FILE TEMPLATE
 
 def llc_kerja(llc_ar):
-    if os.path.exsists("cache"):
+    if os.path.exists("cache"):
         shutil.rmtree("cache")
     os.mkdir("cache")
     os.chdir("cache")
