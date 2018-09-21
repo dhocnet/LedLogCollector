@@ -479,13 +479,13 @@ llc_xml1 = """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9In
 c3N0IHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvc3ByZWFkc2hlZXRt
 bC8yMDA2L21haW4iIGNvdW50PSI5IiB1bmlxdWVDb3VudD0iOSI+PHNpPjx0IHhtbDpzcGFjZT0i
 cHJlc2VydmUiPkxFRCBNYW5hZ2VyIDIwMTIgUGxheSBMb2c8L3Q+PC9zaT48c2k+PHQgeG1sOnNw
-YWNlPSJwcmVzZXJ2ZSI+OiBMb2cgZm9yIEphbnVhcmkgMjAxNjwvdD48L3NpPjxzaT48dCB4bWw6
-c3BhY2U9InByZXNlcnZlIj5BdXRvIGdlbmVyYXRlIGxvZyBieSBMZWRMb2dDb2xsZWN0b3Ig4oCT
-IGh0dHBzOi8vZ2l0aHViLmNvbS9kaG9jbmV0L0xlZExvZ0NvbGxlY3RvcjwvdD48L3NpPjxzaT48
-dCB4bWw6c3BhY2U9InByZXNlcnZlIj5QTEFZIERBVEU8L3Q+PC9zaT48c2k+PHQgeG1sOnNwYWNl
-PSJwcmVzZXJ2ZSI+Q1VSUkVOVCBQT1NJVElPTjwvdD48L3NpPjxzaT48dCB4bWw6c3BhY2U9InBy
-ZXNlcnZlIj5EVVJBVElPTjwvdD48L3NpPjxzaT48dCB4bWw6c3BhY2U9InByZXNlcnZlIj5NRURJ
-QTwvdD48L3NpPgo="""
+YWNlPSJwcmVzZXJ2ZSI+OiBMb2cgZm9yIAo="""
+llc_xml2 = """IDIwMTY8L3Q+PC9zaT48c2k+PHQgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+QXV0byBnZW5lcmF0ZSBs
+b2cgYnkgTGVkTG9nQ29sbGVjdG9yIOKAkyBodHRwczovL2dpdGh1Yi5jb20vZGhvY25ldC9MZWRM
+b2dDb2xsZWN0b3I8L3Q+PC9zaT48c2k+PHQgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+UExBWSBEQVRF
+PC90Pjwvc2k+PHNpPjx0IHhtbDpzcGFjZT0icHJlc2VydmUiPkNVUlJFTlQgUE9TSVRJT048L3Q+
+PC9zaT48c2k+PHQgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+RFVSQVRJT048L3Q+PC9zaT48c2k+PHQg
+eG1sOnNwYWNlPSJwcmVzZXJ2ZSI+TUVESUE8L3Q+PC9zaT4K"""
 # SELESAI EXCEL (XLSX) DIR STRUCTURE DAN FILE TEMPLATE
 
 def llc_kerja(llc_ar):
@@ -510,8 +510,6 @@ def llc_kerja(llc_ar):
                 llc_a = codecs.open("%s\\%s\\%s"%(llc_ar,llc_pil,llc_ffx),"r",encoding="utf-16")
                 llc_b = llc_a.readlines()
                 llc_a.close()
-                llc_a = codecs.open("xl\\sharedStrings.xml","w",encoding="utf-16")
-                llc_a.write(base64.decodestring(llc_xml1))
                 for llc_c in llc_b:
                     if llc_c.find("Duration") != -1:
                         llc_e = llc_c.split("=")
@@ -526,6 +524,8 @@ def llc_kerja(llc_ar):
                                 llc_j = llc_l[8:]
                             elif llc_l.find("CurPos") != -1:
                                 llc_k = llc_l[6:]
+                        llc_a = codecs.open("xl\\sharedStrings.xml","w",encoding="utf-16")
+                        llc_a.write("%s%s%s"%(base64.decodestring(llc_xml1),llc_bulan[llc_h[0]],base64.decodestring(llc_xml2))
                         llc_a.write("<si><t xml:space=\"preserve\">%s %s %s %s</t></si>",
                                     "<si><t xml:space=\"preserve\">%s</t></si>",
                                     "<si><t xml:space=\"preserve\">%s</t></si>",
