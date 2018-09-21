@@ -492,7 +492,7 @@ def llc_kerja(llc_ar):
     if not os.path.exsists("cache"):
         os.mkdir("cache")
     os.chdir("cache")
-    shutil.rmtree(".")
+    shutil.rmtree(os.getcwd())
     llc_fdir = os.listdir(llc_ar)
     print "Ditemukan: %d direktori log..."%len(llc_fdir)
     for llc_pil in llc_fdir:
