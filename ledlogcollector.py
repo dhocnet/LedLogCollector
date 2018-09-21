@@ -526,10 +526,10 @@ def llc_kerja(llc_ar):
                                 llc_k = llc_l[6:]
                         llc_a = codecs.open("xl\\sharedStrings.xml","w",encoding="utf-16")
                         llc_a.write("%s%s%s"%(base64.decodestring(llc_xml1),llc_bulan[llc_h[0]],base64.decodestring(llc_xml2))
-                        llc_a.write("<si><t xml:space=\"preserve\">%s %s %s %s</t></si>",
-                                    "<si><t xml:space=\"preserve\">%s</t></si>",
-                                    "<si><t xml:space=\"preserve\">%s</t></si>",
-                                    "<si><t xml:space=\"preserve\">%s</t></si>"%(llc_h[:-4],llc_bulan[llc_h[0]],llc_pil[-4:],llc_f,llc_k,llc_j,llc_g))
+                        llc_a.write("""<si><t xml:space=\"preserve\">%s %s %s %s</t></si>
+                                    <si><t xml:space=\"preserve\">%s</t></si>
+                                    <si><t xml:space=\"preserve\">%s</t></si>
+                                    <si><t xml:space=\"preserve\">%s</t></si>"""%(llc_h[:-4],llc_bulan[llc_h[0]],llc_pil[-4:],llc_f,llc_k,llc_j,llc_g))
                 llc_a.write("</sst>")
                 llc_a.close()
                 # BUAT KOMPONEN FILE EXCEL DARI TEMPLATE
