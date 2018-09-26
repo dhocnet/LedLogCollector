@@ -17,7 +17,7 @@ import os, codecs
 llc_32 = "c:\\Program Files\\LED soft\\LED Manager 2012\\LogFile"
 llc_64 = "c:\\Program Files (x86)\\LED soft\\LED Manager 2012\\LogFile"
 llc_out = "c:\\LedLog Collector"
-llc_xmlh = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><PlayLog xmlns:xsi=\"http://www.w3.org/2001/XMLSchema\">"
+llc_xmlh = "<?xml version=\"1.0\" encoding=\"UTF-16\"?><PlayLog xmlns:xsi=\"http://www.w3.org/2001/XMLSchema\">"
 
 def llc_kerja(llc_ar):
         llc_fdir = os.listdir(llc_ar)
