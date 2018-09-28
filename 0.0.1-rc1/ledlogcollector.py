@@ -854,7 +854,6 @@ def llc_kerja(llc_ar):
                 llc_q = zipfile.ZipFile("%szip"%llc_ffx[:-3],"w")
                 for llc_r in llc_xmlf:
                     llc_q.write(llc_r)
-                llc_q.write("_rels")
                 llc_q.write("xl\\sharedStrings.xml")
                 llc_q.close()
                 # export ke xlsx
