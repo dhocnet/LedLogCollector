@@ -851,7 +851,7 @@ def llc_kerja(llc_ar):
                     llc_p.close()
                     llc_o += 1
                 # kompres berkas ke zip
-                llc_q = zipfile.ZipFile("%szip"%llc_ffx[:-3],"w")
+                llc_q = zipfile.ZipFile("%szip"%llc_ffx[:-3],"w",ZIP_DEFLATED)
                 for llc_r in llc_xmlf:
                     llc_q.write(llc_r)
                 llc_q.write("xl\\sharedStrings.xml")
