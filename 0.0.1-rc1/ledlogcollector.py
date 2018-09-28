@@ -22,7 +22,7 @@ llc_bulan = {"1":"January","2":"February","3":"March","4":"April","5":"May","6":
                      "7":"July","8":"August","9":"September","10":"October","11":"November","12":"December"}
 # MULAI EXCEL (XLSX) DIR STRUCTURE DAN FILE TEMPLATE
 llc_dir = ["docProps","_rels","xl","xl\\_rels","xl\\worksheets","xl\\worksheets\\_rels"]
-llc_xmlf = ["[Content_Types].xml","docProps\\app.xml","docProps\\core.xml","xl\\styles.xml","xl\\workbook.xml",
+llc_xmlf = ["[Content_Types].xml","_rels\\.rels","docProps\\app.xml","docProps\\core.xml","xl\\styles.xml","xl\\workbook.xml",
                   "xl\\_rels\\workbook.xml.rels","xl\\worksheets\\sheet1.xml","xl\\worksheets\\_rels\\sheet1.xml.rels"]
 llc_xmlc = ["""PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48VHlwZXMgeG1sbnM9Imh0dHA6
 Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvY29udGVudC10eXBlcyI+
@@ -51,14 +51,25 @@ bi92bmQub3BlbnhtbGZvcm1hdHMtb2ZmaWNlZG9jdW1lbnQuZXh0ZW5kZWQtcHJvcGVydGllcyt4
 bWwiLz48T3ZlcnJpZGUgUGFydE5hbWU9Ii9kb2NQcm9wcy9jb3JlLnhtbCIgQ29udGVudFR5cGU9
 ImFwcGxpY2F0aW9uL3ZuZC5vcGVueG1sZm9ybWF0cy1wYWNrYWdlLmNvcmUtcHJvcGVydGllcyt4
 bWwiLz48L1R5cGVzPg==""",
-                   """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxQ
+            """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxS
+ZWxhdGlvbnNoaXBzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvcGFj
+a2FnZS8yMDA2L3JlbGF0aW9uc2hpcHMiPjxSZWxhdGlvbnNoaXAgSWQ9InJJZDMiIFR5cGU9Imh0
+dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9vZmZpY2VEb2N1bWVudC8yMDA2L3JlbGF0
+aW9uc2hpcHMvZXh0ZW5kZWQtcHJvcGVydGllcyIgVGFyZ2V0PSJkb2NQcm9wcy9hcHAueG1sIi8+
+PFJlbGF0aW9uc2hpcCBJZD0icklkMiIgVHlwZT0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1h
+dHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlvbnNoaXBzL21ldGFkYXRhL2NvcmUtcHJvcGVydGll
+cyIgVGFyZ2V0PSJkb2NQcm9wcy9jb3JlLnhtbCIvPjxSZWxhdGlvbnNoaXAgSWQ9InJJZDEiIFR5
+cGU9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9vZmZpY2VEb2N1bWVudC8yMDA2
+L3JlbGF0aW9uc2hpcHMvb2ZmaWNlRG9jdW1lbnQiIFRhcmdldD0ieGwvd29ya2Jvb2sueG1sIi8+
+PC9SZWxhdGlvbnNoaXBzPg==""",
+            """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxQ
 cm9wZXJ0aWVzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvb2ZmaWNl
 RG9jdW1lbnQvMjAwNi9leHRlbmRlZC1wcm9wZXJ0aWVzIiB4bWxuczp2dD0iaHR0cDovL3NjaGVt
 YXMub3BlbnhtbGZvcm1hdHMub3JnL29mZmljZURvY3VtZW50LzIwMDYvZG9jUHJvcHNWVHlwZXMi
 PjxUZW1wbGF0ZT48L1RlbXBsYXRlPjxUb3RhbFRpbWU+ODwvVG90YWxUaW1lPjxBcHBsaWNhdGlv
 bj5MaWJyZU9mZmljZS82LjEuMS4xJExpbnV4X1g4Nl82NCBMaWJyZU9mZmljZV9wcm9qZWN0LzEw
 JEJ1aWxkLTE8L0FwcGxpY2F0aW9uPjwvUHJvcGVydGllcz4=""",
-                   """UEQ5NGJXd2dkbVZ5YzJsdmJqMGlNUzR3SWlCbGJtTnZaR2x1WnowaVZWUkdMVGdpSUhOMFlXNWtZ
+            """UEQ5NGJXd2dkbVZ5YzJsdmJqMGlNUzR3SWlCbGJtTnZaR2x1WnowaVZWUkdMVGdpSUhOMFlXNWtZ
 V3h2Ym1VOUlubGxjeUkvUGp4UQpjbTl3WlhKMGFXVnpJSGh0Ykc1elBTSm9kSFJ3T2k4dmMyTm9a
 VzFoY3k1dmNHVnVlRzFzWm05eWJXRjBjeTV2Y21jdmIyWm1hV05sClJHOWpkVzFsYm5Rdk1qQXdO
 aTlsZUhSbGJtUmxaQzF3Y205d1pYSjBhV1Z6SWlCNGJXeHVjenAyZEQwaWFIUjBjRG92TDNOamFH
@@ -67,7 +78,7 @@ WXZaRzlqVUhKdmNITldWSGx3WlhNaQpQanhVWlcxd2JHRjBaVDQ4TDFSbGJYQnNZWFJsUGp4VWIz
 UmhiRlJwYldVK09Ed3ZWRzkwWVd4VWFXMWxQanhCY0hCc2FXTmhkR2x2CmJqNU1hV0p5WlU5bVpt
 bGpaUzgyTGpFdU1TNHhKRXhwYm5WNFgxZzRObDgyTkNCTWFXSnlaVTltWm1salpWOXdjbTlxWldO
 MEx6RXcKSkVKMWFXeGtMVEU4TDBGd2NHeHBZMkYwYVc5dVBqd3ZVSEp2Y0dWeWRHbGxjejQ9Cg==""",
-                   """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pjxz
+            """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pjxz
 dHlsZVNoZWV0IHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvc3ByZWFk
 c2hlZXRtbC8yMDA2L21haW4iPjxudW1GbXRzIGNvdW50PSIxIj48bnVtRm10IG51bUZtdElkPSIx
 NjQiIGZvcm1hdENvZGU9IkdlbmVyYWwiLz48L251bUZtdHM+PGZvbnRzIGNvdW50PSIxOSI+PGZv
@@ -375,7 +386,7 @@ OTY2Ii8+PHJnYkNvbG9yIHJnYj0iRkYwMDMzMDAiLz48cmdiQ29sb3IgcmdiPSJGRjMzMzMwMCIv
 PjxyZ2JDb2xvciByZ2I9IkZGOTkzMzAwIi8+PHJnYkNvbG9yIHJnYj0iRkY5OTMzNjYiLz48cmdi
 Q29sb3IgcmdiPSJGRjMzMzM5OSIvPjxyZ2JDb2xvciByZ2I9IkZGMzMzMzMzIi8+PC9pbmRleGVk
 Q29sb3JzPjwvY29sb3JzPjwvc3R5bGVTaGVldD4=""",
-                   """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pjxz
+            """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pjxz
 dHlsZVNoZWV0IHhtbG5zPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvc3ByZWFk
 c2hlZXRtbC8yMDA2L21haW4iPjxudW1GbXRzIGNvdW50PSIxIj48bnVtRm10IG51bUZtdElkPSIx
 NjQiIGZvcm1hdENvZGU9IkdlbmVyYWwiLz48L251bUZtdHM+PGZvbnRzIGNvdW50PSIxOSI+PGZv
@@ -683,7 +694,7 @@ OTY2Ii8+PHJnYkNvbG9yIHJnYj0iRkYwMDMzMDAiLz48cmdiQ29sb3IgcmdiPSJGRjMzMzMwMCIv
 PjxyZ2JDb2xvciByZ2I9IkZGOTkzMzAwIi8+PHJnYkNvbG9yIHJnYj0iRkY5OTMzNjYiLz48cmdi
 Q29sb3IgcmdiPSJGRjMzMzM5OSIvPjxyZ2JDb2xvciByZ2I9IkZGMzMzMzMzIi8+PC9pbmRleGVk
 Q29sb3JzPjwvY29sb3JzPjwvc3R5bGVTaGVldD4=""",
-                   """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48UmVsYXRpb25zaGlwcyB4bWxu
+            """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48UmVsYXRpb25zaGlwcyB4bWxu
 cz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlv
 bnNoaXBzIj48UmVsYXRpb25zaGlwIElkPSJySWQxIiBUeXBlPSJodHRwOi8vc2NoZW1hcy5vcGVu
 eG1sZm9ybWF0cy5vcmcvb2ZmaWNlRG9jdW1lbnQvMjAwNi9yZWxhdGlvbnNoaXBzL3N0eWxlcyIg
@@ -693,7 +704,7 @@ aGlwcy93b3Jrc2hlZXQiIFRhcmdldD0id29ya3NoZWV0cy9zaGVldDEueG1sIi8+PFJlbGF0aW9u
 c2hpcCBJZD0icklkMyIgVHlwZT0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL29m
 ZmljZURvY3VtZW50LzIwMDYvcmVsYXRpb25zaGlwcy9zaGFyZWRTdHJpbmdzIiBUYXJnZXQ9InNo
 YXJlZFN0cmluZ3MueG1sIi8+PC9SZWxhdGlvbnNoaXBzPg==""",
-                   """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pjx3
+            """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pjx3
 b3Jrc2hlZXQgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9zcHJlYWRz
 aGVldG1sLzIwMDYvbWFpbiIgeG1sbnM6cj0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMu
 b3JnL29mZmljZURvY3VtZW50LzIwMDYvcmVsYXRpb25zaGlwcyI+PHNoZWV0UHIgZmlsdGVyTW9k
@@ -758,7 +769,7 @@ UGFnZU51bWJlcj0iZmFsc2UiIGhvcml6b250YWxEcGk9IjMwMCIgdmVydGljYWxEcGk9IjMwMCIg
 Y29waWVzPSIxIi8+PGhlYWRlckZvb3RlciBkaWZmZXJlbnRGaXJzdD0iZmFsc2UiIGRpZmZlcmVu
 dE9kZEV2ZW49ImZhbHNlIj48b2RkSGVhZGVyPjwvb2RkSGVhZGVyPjxvZGRGb290ZXI+PC9vZGRG
 b290ZXI+PC9oZWFkZXJGb290ZXI+PC93b3Jrc2hlZXQ+""",
-                   """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48UmVsYXRpb25zaGlwcyB4bWxu
+            """PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48UmVsYXRpb25zaGlwcyB4bWxu
 cz0iaHR0cDovL3NjaGVtYXMub3BlbnhtbGZvcm1hdHMub3JnL3BhY2thZ2UvMjAwNi9yZWxhdGlv
 bnNoaXBzIj48UmVsYXRpb25zaGlwIElkPSJySWQxIiBUeXBlPSJodHRwOi8vc2NoZW1hcy5vcGVu
 eG1sZm9ybWF0cy5vcmcvb2ZmaWNlRG9jdW1lbnQvMjAwNi9yZWxhdGlvbnNoaXBzL2h5cGVybGlu
