@@ -45,7 +45,7 @@ def llc_kerja(llc_ar):
                                         # llc_d = llc_c.decode("utf-8")
                                         if llc_c.find("Duration") != -1:
                                                 llc_e = llc_c.split("=")
-                                                llc_f = llc_e[0][:8]
+                                                llc_f = llc_e[0][:9]
                                                 llc_g = llc_e[1][:-7]
                                                 llc_a.write("<PlayData><WaktuMain>%s</WaktuMain><FileMedia>%s</FileMedia></PlayData>"%(llc_f,llc_g))
                                                 print "Ditambahkan: %s"%llc_g
